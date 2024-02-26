@@ -1,0 +1,46 @@
+
+#
+# /etc/fstab
+# Created by anaconda on Mon Jan 29 03:45:50 2024
+#
+# Accessible filesystems, by reference, are maintained under '/dev/disk/'.
+# See man pages fstab(5), findfs(8), mount(8) and/or blkid(8) for more info.
+#
+# After editing this file, run 'systemctl daemon-reload' to update systemd
+# units generated from this file.
+#
+/dev/mapper/cs-root     /                       xfs     defaults        0 0
+UUID=01c6c433-6f14-407c-877f-b3327de17838 /boot                   xfs     defaults        0 0
+/dev/mapper/cs-home     /home                   xfs     defaults        0 0
+/dev/mapper/cs-swap     none                    swap    defaults        0 0
+
+#
+# Sfecific configuration
+#
+#/dev/sdb1	/testmount	xfs	defaults	0 2
+#/dev/sdd1 /oracle xfs defaults 0 2
+#/dev/vg1/lv1	/lv1	ext4	defaults	0	2
+#/dev/mapper/vg1-lv2	/lv2	ext4	defaults	0	2
+#/dev/vg1/LV1 /lvm1 ext4 defaults 0 2
+#/dev/vg1/LV2 /lvm2 ext4 defaults 0 2
+#/dev/vg2/LV3 /lvm3 ext4 defaults 0 2
+#/dev/vg2/LV4 /lvm4 ext4 defaults 0 2
+#/dev/wasvg/waslv /was ext4 defaults 0 2
+#/dev/wasvg/sourcelv /was/source ext4 defaults 0 2
+#/dev/wasvg/wasloglv /waslogs ext4 defaults 0 2
+
+# RAID configuration
+
+#/dev/md0 /raid0 ext4 defaults 0 2
+#/dev/md1 /raid1 ext4 defaults 0 2
+#/dev/md5 /raid5 ext4 defaults 0 2
+
+# SWAP configuration
+#/swap/swapfile none swap defaults 0 0
+#/dev/sdb1 none swap defaults 0 0
+#/dev/cs/swap2 none swap defaults 0 0
+
+#
+# Stratis Volume configuration
+#
+#UUID="a481b193-899c-4caf-bd00-838305974222" /vo1 xfs x-systemd.requires=stratis.service 0 0
